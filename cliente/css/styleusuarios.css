@@ -1,0 +1,23 @@
+*:focus {
+    outline: none;
+  }
+  body {
+  font-family: Arial;
+  background-color: #CCA5EC;
+  background-image: url('../img/flor.png');  /* Ruta de la imagen de patrón */
+  background-repeat: repeat;
+  background-size: 50px 50px;
+  padding: 50px;
+  }
+
+.login {
+margin: 20px auto;
+width: 500px;
+}
+.login-screen {
+background-color: #FFF;
+padding: 20px;
+border-radius: 15px;
+border: 2px solid #321962;
+text-align: center;
+}

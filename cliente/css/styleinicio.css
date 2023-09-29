@@ -1,0 +1,58 @@
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 100vh; 
+    margin: 0; 
+    background-color: #CCA5EC;
+    background-image: url('../img/flor.png');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    font-family: Arial;
+    font-size: 50px;
+} 
+
+.container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: white;
+    padding: 10px; 
+    margin: 20px 20px 20px 20px;
+    border-radius: 15px;
+    border: 5px solid #321962;
+}
+.column1 {
+    flex: 1;
+    padding: 10px; 
+    color: black;
+    font-size: 25px;
+}
+
+.column2 {
+    margin-left: 10px;
+    font-size: 25px; 
+}
+
+.button{
+    padding: 10px 20px;
+    background-color: #321962;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    border-radius: 15px;
+    text-decoration: none;
+}
+.button:hover
+{
+    padding: 10px 20px;
+    background-color: #CCA5EC;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    border-radius: 15px;
+    text-decoration: none;
+}

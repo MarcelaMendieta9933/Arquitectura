@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../img/flor.png" />
+    <link rel="stylesheet" type="text/css" href="../css/stylelogin.css"/>
+    <title>Login</title>
+
+</head>
+<body>
+  <div class="login">
+    <div class="login-screen">
+      <a link type="button" class="close" href="inicio.html">&times;
+      </a>
+      <div class="app-title">
+          <h1>Inicie sesión</h1>
+      </div>
+      <div class="login-box">
+        <div class="login-form">
+          <form method="post" action="servidor/login.php" onsubmit="return validate(this)">
+            <div class="control-group">
+              <input type="text" class="login-field" value="" placeholder="ingrese su usuario" id="usuario" autocomplete="off" maxlength="16" name="username" />
+              <label class="login-field-icon fui-user" for="login-name"></label>
+              <br>
+              <br>
+              <input type="password" class="login-field" value="" placeholder="ingrese su contraseña" maxlength="12" name="password" id="contraseña" />
+              <label class="login-field-icon fui-lock" for="login-pass"></label>
+              <br>
+              <br>
+            <input type="submit" class="btn btn-primary btn-large btn-block" value="Entrar"/>
+            <br>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script type="text/javascript">
+  function validate(form)
+{
+  fail = validateUsername(form.username.value)
+  fail += validatePassword(form.password.value)
+
+  if   (fail == "")   return true
+  else { alert(fail); return false }
+}
+  function validateUsername(field)
+{
+  if (field == "") return "No se ingresó ningún nombre de usuario.\n"
+  else if (field.length < 5)
+    return "Los nombres de usuario deben tener al menos 5 caracteres.\n"
+  else if (/[^a-zA-Z0-9_-]/.test(field))
+    return "Solo se permiten a-z, A-Z, 0-9, - y _ en los nombres de usuario.\n"
+  return ""
+}
+
+function validatePassword(field)
+{
+  if (field == "") return "No se ingresó ninguna contraseña.\n"
+  else if (field.length < 6)
+    return "Las contraseñas deben tener al menos 6 caracteres.\n"
+  else if (! /[a-z]/.test(field) ||
+           ! /[A-Z]/.test(field) ||
+           ! /[0-9]/.test(field))
+    return "Las contraseñas requieren uno de a-z, A-Z y 0-9.\n"
+  return ""
+}
+</script>
+</html>
