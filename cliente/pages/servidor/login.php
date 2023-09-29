@@ -21,27 +21,27 @@ $conn = conectar();
 //Verificar si se ha enviado el formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    // Obtener el nombre del formulario
+    // Obtener los parametros del fomrulario
     $usuario = $_POST["username"];
     $contrasena = $_POST["password"];
     
-    // Consulta SQL para buscar el nombre en la base de datos y verificar la contraseña
+    // Consulta SQL enviando el usuario y contraseña 
     $sql = "SELECT nombre FROM usuarios WHERE usuario = '$usuario' AND contraseña = '$contrasena'";
     $queryusuario = mysqli_query($conn,$sql);
     $nr = mysqli_num_rows($queryusuario); 
     $mostrar = mysqli_fetch_array($queryusuario); 
 
     if ($mostrar > 0) {
-        // Si se encuentra el nombre en la base de datos, redirigir a la página de bienvenida
+        //Si existe el usuario y contraseña, se redirecciona a la paina del usuario
         header("Location: ../usuario.php?nombre=" . urlencode($mostrar["nombre"]));
         exit();
     } else {
-        // Si el nombre no se encuentra en la base de datos, redirigir de nuevo al formulario de inicio de sesión
+        // Sino muestra un mensaje de datos incorrectos
         echo "<script> alert('Usuario o contraseña incorrecto. ');window.location= '../login.html'</script>"; 
         exit();
     }
 } else {
-    // Si no se ha enviado el formulario, redirigir al formulario de inicio de sesión
+    // Si no se logró enviar, muestra una alerta
     echo "<script> alert('Usuario o contraseña incorrecto. ');window.location= '../inicio.html'</script>"; 
     exit();
 }

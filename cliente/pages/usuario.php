@@ -7,6 +7,7 @@
     <title>Entrada</title>
 </head>
 <body>
+    <!-- Vista de usuarios al logearse -->
     <div class="login">
         <div class="login-screen">
             <?php
