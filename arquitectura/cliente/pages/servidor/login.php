@@ -1,23 +1,10 @@
 <?php
 
-function conectar(){
-    // Configuración de la conexión a la base de datos
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $database = "servidor_db";
-    
-    $con = mysqli_connect($servername, $username, $password, $database);
-    
-        // Verificar la conexión
-    if (!$con) {
-        die("Error al conectar: " . mysqli_connect_error());
-    }
+include('conexion_bd.php'); // Incluye el archivo de conexión
 
-    return $con;
-
-}
+// Llama a la función conectar para obtener la conexión a la base de datos
 $conn = conectar();
+
 //Verificar si se ha enviado el formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 

@@ -3,23 +3,186 @@
 *:focus {
     outline: none;
   }
-  body {
-  font-family: Arial;
-  background-color: #CCA5EC;
-  background-image: url('../img/flor.png');
-  background-repeat: repeat;
-  background-size: 50px 50px;
-  padding: 50px;
-  }
-
-.login {
+.container {
 margin: 20px auto;
-width: 500px;
+width: 1000px;
 }
-.login-screen {
+.container-screen{
 background-color: #FFF;
 padding: 20px;
 border-radius: 15px;
 border: 2px solid #321962;
 text-align: center;
+}
+/* Estilos para ocultar el modal por defecto */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.modal-contenido {
+  background-color: #CCA5EC;
+  width: 50%;
+  margin: auto;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+#titulo_modal
+{
+  
+}
+#titulo, #descripcion
+{
+  text-align: left;
+  background-color: #ECF0F1;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: 200;
+  padding: 10px 10px;
+  transition: border .5s;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+/* Estilo para el botón de cierre (la "X" en la esquina) */
+.cerrar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.mensaje_usuario
+{
+  border-radius: 15px;
+  width: auto;
+  height: 80px;
+  background-color: #b77ce7; 
+  margin-bottom: 10px;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  color: black;
+  text-align: center;
+  padding: 30px 30px;
+}
+.btn_alineacion
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.close-button {
+  border: 2px solid transparent;
+  background: #552ba5;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 10px 0;
+  text-decoration: none;
+  text-shadow: none;
+  border-radius: 15px;
+  box-shadow: none;
+  transition: 0.25s;
+  width: 130px;
+  height: 50px;
+}
+.close-button:hover {
+  background-color: #321962;
+}
+.btn_agregar
+{
+  border: 2px solid transparent;
+  background: #2b37a5;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 10px 0;
+  text-decoration: none;
+  text-shadow: none;
+  border-radius: 15px;
+  box-shadow: none;
+  transition: 0.25s;
+  width: 130px;
+  height: 50px;
+}
+.cerrar
+{
+  font-size: 40px;
+}
+.agregar_nota
+{
+  border: 2px solid transparent;
+  background: #2ba541;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 10px 0;
+  text-decoration: none;
+  text-shadow: none;
+  border-radius: 15px;
+  box-shadow: none;
+  transition: 0.25s;
+  width: 130px;
+  height: 50px;
+}
+.agregar_nota:hover
+{
+  background-color: #19622f;
+}
+.btn_agregar:hover
+{
+  background-color: #1b1962;
+}
+.btn_modificar
+{
+  border: 2px solid transparent;
+  background: #a5952b;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 10px 0;
+  text-decoration: none;
+  text-shadow: none;
+  border-radius: 15px;
+  box-shadow: none;
+  transition: 0.25s;
+  width: 130px;
+  height: 50px;
+}
+.btn_modificar:hover
+{
+  background-color: #625c19;
+}
+.btn_borrar
+{
+  border: 2px solid transparent;
+  background: #ae1717;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 10px 0;
+  text-decoration: none;
+  text-shadow: none;
+  border-radius: 15px;
+  box-shadow: none;
+  transition: 0.25s;
+  width: 130px;
+  height: 50px;
+}
+.btn_borrar:hover
+{
+  background-color: #732828;
+}
+#table
+{
+  border: 2px solid #321962;
+  border-radius: 15px;
 }

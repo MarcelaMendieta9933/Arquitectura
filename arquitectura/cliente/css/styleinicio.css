@@ -1,20 +1,4 @@
 /* Estilo para la pagina del inicio */
-
-body
-{
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    height: 100vh; 
-    margin: 0; 
-    background-color: #CCA5EC;
-    background-image: url('../img/flor.png');
-    background-size: cover; 
-    background-repeat: no-repeat;
-    font-family: Arial;
-    font-size: 50px;
-} 
-
 .container {
     display: flex;
     justify-content: space-between; 

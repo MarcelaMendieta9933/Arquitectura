@@ -8,13 +8,6 @@
     *:focus {
       outline: none;
     }
-    body {
-    font-family: Arial;
-    background-color: #CCA5EC;  /* Ruta de la imagen de patrón */
-    background-repeat: repeat;
-    background-size: 50px 50px;
-    padding: 50px;
-    }
     .login {
     margin: 20px auto;
     width: 300px;

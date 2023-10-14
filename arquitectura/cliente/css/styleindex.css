@@ -1,10 +1,6 @@
 /* Estilo para la pagina del index */
 
-body
-{
-    background-color: #CCA5EC;
-    font-family: Arial;
-}  
+  
 .bienvenida
 {
     display: flex;
